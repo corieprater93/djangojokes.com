@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     # Local Apps (Alphabetical Order)
     'common.apps.CommonConfig',
     'jokes.apps.JokesConfig',
-    'jokes.apps.PagesConfig',
+    'pages.apps.PagesConfig',
     'users.apps.UsersConfig',
 ]
 
@@ -73,7 +73,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'BasbHat69!',
         'HOST':'localhost',
-        'POST': 8080,
+        'PORT': 5432,
     }
 }
 
@@ -96,6 +96,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# AUTHENTICATION SETTINGS
 AUTH_USER_MODEL = 'users.CustomUser'
 
 
