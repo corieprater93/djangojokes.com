@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -121,3 +122,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+# Bottom of settings.py
+if os.environ.get('ENVIRONMENT') != 'production':
+    from .local_settings import *
+# Nothing below this line!
